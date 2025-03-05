@@ -97,12 +97,22 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-          // Center is a layout widget. It takes a single child and positions it
-          // in the middle of the parent.
+        // Center is a layout widget. It takes a single child and positions it
+        // in the middle of the parent.
+        child: Container(
+          height: double.infinity,
+          width: double.infinity,
+          margin: EdgeInsets.all(50.0),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(25.0),
+            color: Colors.red,
+          ),
           child: Text(
-        'Hello there',
-        style: TextStyle(color: Colors.amber),
-      )),
+            'Hello there',
+            style: TextStyle(color: Colors.amber),
+          ),
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
