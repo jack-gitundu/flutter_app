@@ -98,6 +98,8 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Image.network(
         'https://papers.co/wallpaper/papers.co-we14-pattern-background-apple-iphone12-rainbow-36-3840x2400-4k-wallpaper.jpg',
+        height: double.infinity,
+        fit: BoxFit.cover,
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
