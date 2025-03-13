@@ -102,6 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Container(
           color: Colors.black,
           child: Row(
+            mainAxisSize: MainAxisSize.min,
             children: [
               Container(
                 height: 100.0,
@@ -110,6 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   borderRadius: BorderRadius.circular(25.0),
                   color: Colors.red,
                 ),
+                child: Center(child: Text('Testing waters'),),
               ),
               Container(
                 height: 100.0,
