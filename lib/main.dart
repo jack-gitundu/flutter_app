@@ -96,35 +96,8 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Container(
-          color: Colors.black,
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Container(
-                height: 100.0,
-                width: 100.0,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25.0),
-                  color: Colors.red,
-                ),
-                child: Center(child: Text('Testing waters'),),
-              ),
-              Container(
-                height: 100.0,
-                width: 100.0,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25.0),
-                  color: Colors.red,
-                ),
-              ),
-            ],
-          ),
-        )
-
+      body: Image.network(
+        'https://papers.co/wallpaper/papers.co-we14-pattern-background-apple-iphone12-rainbow-36-3840x2400-4k-wallpaper.jpg',
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
