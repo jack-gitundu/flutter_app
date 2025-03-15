@@ -23,6 +23,12 @@ class MyApp extends StatelessWidget {
           actions: [Text('Logout'), Icon(Icons.login)],
           backgroundColor: Colors.teal,
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            print('You have clicked the floating action button');
+          },
+          child: Icon(Icons.add),
+        ),
         bottomNavigationBar: NavigationBar(
           destinations: [
             NavigationDestination(
