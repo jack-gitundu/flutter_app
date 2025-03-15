@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/widgets/navbar_widget.dart';
+import 'package:flutter_app/views/widget_tree.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,16 +31,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Flutter Mapp'),
-      ),
-      body: currentIndex == 0
-          ? Center(child: Text('1'))
-          : Center(
-              child: Text('2'),
-            ),
-      bottomNavigationBar: NavbarWidget(),
-    );
+    return WidgetTree();
   }
 }
