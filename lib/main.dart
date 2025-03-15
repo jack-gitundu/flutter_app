@@ -113,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
               leading: Icon(Icons.join_full),
               trailing: Text('Another Text'),
               onTap: () {
-
+                print('Clicked on the red section');
               },
             )
           ],
