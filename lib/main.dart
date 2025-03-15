@@ -17,7 +17,18 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark
         ),
       ),
-      home: Scaffold(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Flutter Mapp'),
+          centerTitle: false,
+          leading: Icon(Icons.login),
+          actions: [
+            Text('Logout'),
+            Icon(Icons.login)
+          ],
+          backgroundColor: Colors.teal,
+        ),
+      ),
     );
   }
 }
