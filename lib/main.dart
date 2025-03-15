@@ -15,46 +15,49 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(
             seedColor: Colors.teal, brightness: Brightness.dark),
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Flutter Mapp'),
-          // centerTitle: false,
-          // leading: Icon(Icons.login),
-          // actions: [Text('Logout'), Icon(Icons.login)],
-          // backgroundColor: Colors.teal,
-        ),
-        drawer: Drawer(
-          child: Column(
-            children: [
-              DrawerHeader(
-                child: Text('Drawer'),
-              ),
-              ListTile(
-                title: Text('Logout'),
-              ),
-            ],
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int currentIndex = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter Mapp'),
+      ),
+      body: currentIndex == 0
+          ? Center(child: Text('1'))
+          : Center(
+              child: Text('2'),
+            ),
+      bottomNavigationBar: NavigationBar(
+        destinations: [
+          NavigationDestination(
+            icon: Icon(Icons.home),
+            label: 'Home',
           ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            print('You have clicked the floating action button');
-          },
-          child: Icon(Icons.add),
-        ),
-        bottomNavigationBar: NavigationBar(
-          destinations: [
-            NavigationDestination(
-              icon: Icon(Icons.home),
-              label: 'Home',
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.person),
-              label: 'Profile',
-            ),
-          ],
-          onDestinationSelected: (int value) {},
-          selectedIndex: 1,
-        ),
+          NavigationDestination(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+          ),
+        ],
+        onDestinationSelected: (int value) {
+          setState(() {
+            currentIndex = value;
+          });
+        },
+        selectedIndex: currentIndex,
       ),
     );
   }
