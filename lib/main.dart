@@ -18,10 +18,22 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Flutter Mapp'),
-          centerTitle: false,
-          leading: Icon(Icons.login),
-          actions: [Text('Logout'), Icon(Icons.login)],
-          backgroundColor: Colors.teal,
+          // centerTitle: false,
+          // leading: Icon(Icons.login),
+          // actions: [Text('Logout'), Icon(Icons.login)],
+          // backgroundColor: Colors.teal,
+        ),
+        drawer: Drawer(
+          child: Column(
+            children: [
+              DrawerHeader(
+                child: Text('Drawer'),
+              ),
+              ListTile(
+                title: Text('Logout'),
+              ),
+            ],
+          ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
