@@ -13,20 +13,29 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.teal,
-          brightness: Brightness.dark
-        ),
+            seedColor: Colors.teal, brightness: Brightness.dark),
       ),
       home: Scaffold(
         appBar: AppBar(
           title: Text('Flutter Mapp'),
           centerTitle: false,
           leading: Icon(Icons.login),
-          actions: [
-            Text('Logout'),
-            Icon(Icons.login)
-          ],
+          actions: [Text('Logout'), Icon(Icons.login)],
           backgroundColor: Colors.teal,
+        ),
+        bottomNavigationBar: NavigationBar(
+          destinations: [
+            NavigationDestination(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.person),
+              label: 'Profile',
+            ),
+          ],
+          onDestinationSelected: (int value) {},
+          selectedIndex: 1,
         ),
       ),
     );
