@@ -100,24 +100,14 @@ class _MyHomePageState extends State<MyHomePage> {
           color: Colors.amber,
         ),
       ),
-      body: Container(
-        child: Stack(
-          children: [
-            SizedBox(
-              height: 300,
-              child: Center(child: Text('Flutter development')),
-            ),
-            ListTile(
-              tileColor: Colors.red,
-              title: Text('Application Text'),
-              leading: Icon(Icons.join_full),
-              trailing: Text('Another Text'),
-              onTap: () {
-                print('Clicked on the red section');
-              },
-            )
-          ],
-        ),
+      body: Wrap(
+        children: [
+          Text("Today is Sunday"),
+          Text("Today is Sunday"),
+          Text("Today is Sunday"),
+          Text("Today is Sunday"),
+          Text("Today is Sunday"),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
