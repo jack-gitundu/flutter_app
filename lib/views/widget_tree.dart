@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/data/notifiers.dart';
 import 'package:flutter_app/views/pages/home_page.dart';
 import 'package:flutter_app/views/pages/profile_page.dart';
 
-import '../widgets/navbar_widget.dart';
+import 'widgets/navbar_widget.dart';
 
 List<Widget> pages = [
   HomePage(),
@@ -18,7 +19,12 @@ class WidgetTree extends StatelessWidget {
       appBar: AppBar(
         title: Text('Flutter Mapp'),
       ),
-      body: pages.elementAt(1),
+      body: ValueListenableBuilder(
+        valueListenable: selectedPageNotifier,
+        builder: (context, value, child) {
+          return pages.elementAt(value);
+        },
+      ),
       bottomNavigationBar: NavbarWidget(),
     );
   }
