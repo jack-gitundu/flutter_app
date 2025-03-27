@@ -5,10 +5,7 @@ import 'package:flutter_app/views/pages/profile_page.dart';
 
 import 'widgets/navbar_widget.dart';
 
-List<Widget> pages = [
-  HomePage(),
-  ProfilePage()
-];
+List<Widget> pages = [HomePage(), ProfilePage()];
 
 class WidgetTree extends StatelessWidget {
   const WidgetTree({super.key});
@@ -18,11 +15,17 @@ class WidgetTree extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter Mapp'),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.light_mode),
+          ),
+        ],
       ),
       body: ValueListenableBuilder(
         valueListenable: selectedPageNotifier,
-        builder: (context, value, child) {
-          return pages.elementAt(value);
+        builder: (context, selectedPage, child) {
+          return pages.elementAt(selectedPage);
         },
       ),
       bottomNavigationBar: NavbarWidget(),
