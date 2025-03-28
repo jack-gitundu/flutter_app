@@ -19,6 +19,9 @@ class _SettingsPageState extends State<SettingsPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Settings'),
+        leading: BackButton(onPressed: () {
+          Navigator.pop(context);
+        },),
       ),
       body: SingleChildScrollView(
         child: Padding(
