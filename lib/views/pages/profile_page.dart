@@ -76,7 +76,7 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
             InkWell(
               splashColor: Colors.teal,
-              onTap: (){
+              onTap: () {
                 print('Image detected');
               },
               child: Container(
@@ -85,6 +85,32 @@ class _ProfilePageState extends State<ProfilePage> {
                 color: Colors.white12,
               ),
             ),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.teal,
+                foregroundColor: Colors.white
+              ),
+              child: Text('Click me'),
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('Click me'),
+            ),
+            FilledButton(
+              onPressed: () {},
+              child: Text('Click me'),
+            ),
+            TextButton(
+              onPressed: () {},
+              child: Text('Click me'),
+            ),
+            OutlinedButton(
+              onPressed: () {},
+              child: Text('Click me'),
+            ),
+            CloseButton(),
+            BackButton(),
           ],
         ),
       ),
