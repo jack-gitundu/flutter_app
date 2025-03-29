@@ -6,10 +6,7 @@ import 'package:flutter_app/views/pages/settings_page.dart';
 
 import 'widgets/navbar_widget.dart';
 
-List<Widget> pages = [
-  HomePage(),
-  ProfilePage()
-];
+List<Widget> pages = [HomePage(), ProfilePage()];
 
 class WidgetTree extends StatelessWidget {
   const WidgetTree({super.key});
@@ -39,7 +36,9 @@ class WidgetTree extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return SettingsPage();
+                    return SettingsPage(
+                      title: 'New Settings',
+                    );
                   },
                 ),
               );
